@@ -1,8 +1,7 @@
-# Mern amazona
+# Mern stack
 
 # steps
 
 1. intro
-2. intall tools
-3. create react app
-4. create git repo
+2. install tools
+3. creating git repo
