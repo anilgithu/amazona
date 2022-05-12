@@ -5,3 +5,20 @@
 1. intro
 2. install tools
 3. creating git repo
+4. Add Routing
+5. npm i react-router-dom
+6. Create rout for home screen
+7. create rout for product screen
+8. Create node.js server
+   8.2 run npm init in root folder
+   8.3 Update pakage.json set type: module
+   8.4 Add.js to imports
+   8.5 npm install express
+   8.6 create server.js
+   8.7 add start command as node backend/server .js
+   8.9 require express
+   8.8 create route for / return backend is ready
+   8.9 move product.js from frontend to backend
+   8.10 create route for /api/products
+   8.11 return products
+   8.12 rum npm starts
