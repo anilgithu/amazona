@@ -29,3 +29,9 @@
       _. use state hook
       _. use effect hook
       \*. use redcer hook
+
+9. Manage state by manager Hook
+
+- Define Reducer
+- Updae fetch data
+- Get state from useReducer
