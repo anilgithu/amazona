@@ -22,3 +22,10 @@
    8.10 create route for /api/products
    8.11 return products
    8.12 rum npm starts
+
+   9. fetch Product from backend
+      _. set proxy in pakage.jason
+      _. npm install axios
+      _. use state hook
+      _. use effect hook
+      \*. use redcer hook
