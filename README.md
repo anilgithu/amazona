@@ -35,3 +35,8 @@
 - Define Reducer
 - Updae fetch data
 - Get state from useReducer
+
+10. Add BootStrap UI frame work
+
+- npm Install react-bootstrap bootstrap
+- Update App.js
