@@ -46,6 +46,15 @@
 - Create rating component
 - Create Product component
 - Use rating component in product component
+
 12. Create product details screen
-* fetch product from backend
-* create 3 columns for image
+
+- fetch product from backend
+- create 3 columns for image
+
+13. Loading and essage component
+
+- create loading component
+- Use spinner component
+- create message component
+- create utils.js to get error function
