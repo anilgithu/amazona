@@ -45,6 +45,28 @@ const data = {
       numReviews: 4.5,
       description: 'high quality shirt',
     },
+    {
+      Name: 'Nike slim shirt',
+      slug: 'nike-slim-shirts',
+      catagory: 'shirts',
+      image: '/images/p1.jpg',
+      price: 120,
+      brand: 'Nike',
+      rating: 4.5,
+      numReviews: 4.5,
+      description: 'high quality shirt',
+    },
+    {
+      Name: 'Nike slim shirt',
+      slug: 'nike-slim-shirts',
+      catagory: 'shirts',
+      image: '/images/p1.jpg',
+      price: 120,
+      brand: 'Nike',
+      rating: 4.5,
+      numReviews: 4.5,
+      description: 'high quality shirt',
+    },
   ],
 };
 
