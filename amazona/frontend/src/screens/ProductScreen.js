@@ -1,16 +1,17 @@
 import axios from 'axios';
 import { useContext, useEffect, useReducer } from 'react';
 import { useParams } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import ListGroup from 'react-bootstrap/ListGroup';
-import Rating from '../components/Rating';
-import Badge from 'react-bootstrap/Badge';
 import Card from 'react-bootstrap/Card';
+import ListGroup from 'react-bootstrap/ListGroup';
+import Badge from 'react-bootstrap/Badge';
 import Button from 'react-bootstrap/Button';
+import Rating from '../components/Rating';
 import { Helmet } from 'react-helmet-async';
-import MessageBox from '../components/MessageBox';
 import LoadingBox from '../components/LoadingBox';
+import MessageBox from '../components/MessageBox';
 import { getError } from '../utils';
 import { Store } from '../Store';
 const reducer = (state, action) => {
@@ -27,8 +28,10 @@ const reducer = (state, action) => {
 };
 
 function ProductScreen() {
+  const navigate = useNavigate();
   const params = useParams();
   const { slug } = params;
+
   const [{ loading, error, product }, dispatch] = useReducer(reducer, {
     product: [],
     loading: true,
@@ -46,7 +49,6 @@ function ProductScreen() {
     };
     fetchData();
   }, [slug]);
-
   const { state, dispatch: ctxDispatch } = useContext(Store);
   const { cart } = state;
   const addToCartHandler = async () => {
@@ -54,15 +56,15 @@ function ProductScreen() {
     const quantity = existItem ? existItem.quantity + 1 : 1;
     const { data } = await axios.get(`/api/products/${product._id}`);
     if (data.countInStock < quantity) {
-      window.alert('Sorry.Product is out of stock');
+      window.alert('Sorry. Product is out of stock');
       return;
     }
     ctxDispatch({
-      type: 'CARD_ADD_ITEM',
+      type: 'CART_ADD_ITEM',
       payload: { ...product, quantity },
     });
+    navigate('/cart');
   };
-
   return loading ? (
     <LoadingBox />
   ) : error ? (
@@ -78,7 +80,6 @@ function ProductScreen() {
           ></img>
         </Col>
         <Col md={3}>
-          {' '}
           <ListGroup variant="flush">
             <ListGroup.Item>
               <Helmet>
@@ -92,9 +93,8 @@ function ProductScreen() {
                 numReviews={product.numReviews}
               ></Rating>
             </ListGroup.Item>
-            <ListGroup.Item>Price : ${product.price}</ListGroup.Item>
+            <ListGroup.Item>Pirce : ${product.price}</ListGroup.Item>
             <ListGroup.Item>
-              {' '}
               Description:
               <p>{product.description}</p>
             </ListGroup.Item>
@@ -115,7 +115,7 @@ function ProductScreen() {
                     <Col>Status:</Col>
                     <Col>
                       {product.countInStock > 0 ? (
-                        <Badge bg="success"> In stock</Badge>
+                        <Badge bg="success">In Stock</Badge>
                       ) : (
                         <Badge bg="danger">Unavailable</Badge>
                       )}
@@ -139,5 +139,4 @@ function ProductScreen() {
     </div>
   );
 }
-
 export default ProductScreen;
