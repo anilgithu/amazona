@@ -58,3 +58,10 @@
 - Use spinner component
 - create message component
 - create utils.js to get error function
+
+14. Implement Add to cart
+
+- create react context
+- define reducer
+- create store provider
+- implement add to cart button click handler
