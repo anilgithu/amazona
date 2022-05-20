@@ -82,9 +82,11 @@
     2. click handler for remove item
     3. click handler for checkout
 18. Create Signin Screen
- * create sign in form
- * add email and password
- * add signin button
+
+- create sign in form
+- add email and password
+- add signin button
+
 19. Connect To MongoDB Database
     1. create atlas monogodb database
     2. install local mongodb database
@@ -99,3 +101,7 @@
     1. create user model
     2. seed sample users
     3. create user routs
+22. Create Signin Backend API
+    1. create signin api
+    2. npm install jsonwebtoken
+    3. define generateToken
