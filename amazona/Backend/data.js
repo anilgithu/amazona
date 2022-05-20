@@ -1,8 +1,8 @@
 const data = {
   products: [
     {
-      _id: '1',
-      Name: 'Nike slim shirt',
+      // _id: '1',
+      name: 'Nike slim shirt',
       slug: 'nike-slim-shirts',
       catagory: 'shirts',
       image: '/images/p1.jpg',
@@ -15,8 +15,8 @@ const data = {
     },
 
     {
-      _id: '2',
-      Name: 'Adidas slim shirt',
+      // _id: '2',
+      name: 'Adidas slim shirt',
       slug: 'Adidas-slim-shirts',
       catagory: 'shirts',
       image: '/images/p2.jpg',
@@ -28,8 +28,8 @@ const data = {
       description: 'high quality shirt',
     },
     {
-      _id: '3',
-      Name: 'Nike slim shirt',
+      // _id: '3',
+      name: 'Nike slim shirt',
       slug: 'Nike-slim-shirts',
       catagory: 'shirts',
       image: '/images/p3.jpg',
@@ -41,8 +41,8 @@ const data = {
       description: 'high quality shirt',
     },
     {
-      _id: '4',
-      Name: 'adidas slim shirt',
+      // _id: '4',
+      name: 'adidas slim shirt',
       slug: 'adidas-slim-shirts',
       catagory: 'shirts',
       image: '/images/p4.jpg',

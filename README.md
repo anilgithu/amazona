@@ -82,11 +82,16 @@
     2. click handler for remove item
     3. click handler for checkout
 18. Create Signin Screen
-19. create sign in form
-20. add email and password
-21. add signin button
-22. Connect To MongoDB Database
+ * create sign in form
+ * add email and password
+ * add signin button
+19. Connect To MongoDB Database
     1. create atlas monogodb database
     2. install local mongodb database
     3. npm install mongoose
     4. connect to mongodb database
+20. Seed Sample Products
+    1. create Product model
+    2. create seed route
+    3. use route in server.js
+    4. seed sample product
